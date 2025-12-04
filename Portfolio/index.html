@@ -95,6 +95,48 @@
         </p>
         <p class="project-tech"><strong>Tech:</strong> Generative models, video editing, content scripting</p>
       </article>
+
+      <article class="project">
+  <h4>HeritageGuide Bot</h4>
+  <p class="muted">AI • Computer Vision • Multilingual Interaction</p>
+
+  <p>
+    Developed an intelligent digital heritage guide capable of analyzing historical monuments,
+    artifacts, and cultural sites using image understanding. The bot provides historical insights,
+    cultural context, and architectural analysis in multiple languages. Integrated speech-to-text,
+    text-to-speech, prompt engineering, and conversational memory to deliver an immersive
+    virtual-tour experience.
+  </p>
+
+  <details class="code-block">
+    <summary>📌 View Sample Code</summary>
+    <pre><code>
+# Example: Image analysis snippet from HeritageGuide Bot
+
+def analyze_heritage_image(self, image_path, user_query=None):
+    try:
+        language_name = self.languages.get(self.current_language, "English")
+
+        system_prompt = f"You are a digital heritage guide. Respond in {language_name}."
+        user_message = user_query or "Analyze this heritage site."
+
+        img = Image.open(image_path)
+        prompt = f"{system_prompt}\n\n{user_message}"
+
+        response = self.model.generate_content([prompt, img])
+        return response.text
+
+    except Exception as e:
+        return f"Error analyzing image: {str(e)}"
+    </code></pre>
+  </details>
+
+  <p class="project-tech">
+    <strong>Tech:</strong> Python, Gemini API, PIL, gTTS, SpeechRecognition, Prompt Engineering<br>
+    <strong>GitHub:</strong> <a href="YOUR_GITHUB_LINK_HERE" target="_blank">View full project →</a>
+  </p>
+</article>
+
     </section>
 
     <!-- EXPERIENCE -->
@@ -158,3 +200,4 @@
   </footer>
 </body>
 </html>
+
