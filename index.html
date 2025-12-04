@@ -108,29 +108,6 @@
     virtual-tour experience.
   </p>
 
-  <details class="code-block">
-    <summary>📌 View Sample Code</summary>
-    <pre><code>
-# Example: Image analysis snippet from HeritageGuide Bot
-
-def analyze_heritage_image(self, image_path, user_query=None):
-    try:
-        language_name = self.languages.get(self.current_language, "English")
-
-        system_prompt = f"You are a digital heritage guide. Respond in {language_name}."
-        user_message = user_query or "Analyze this heritage site."
-
-        img = Image.open(image_path)
-        prompt = f"{system_prompt}\n\n{user_message}"
-
-        response = self.model.generate_content([prompt, img])
-        return response.text
-
-    except Exception as e:
-        return f"Error analyzing image: {str(e)}"
-    </code></pre>
-  </details>
-
   <p class="project-tech">
     <strong>Tech:</strong> Python, Gemini API, PIL, gTTS, SpeechRecognition, Prompt Engineering<br>
     <strong>GitHub:</strong> <a href="YOUR_GITHUB_LINK_HERE" target="_blank">View full project →</a>
@@ -188,7 +165,7 @@ def analyze_heritage_image(self, image_path, user_query=None):
     <!-- CONTACT -->
     <section id="contact" class="section contact">
       <h2>Contact</h2>
-      <p>If you'd like to collaborate or see project demos, email me at <a href="mailto:prudhvinarayana@gmail.com">prudhvinarayana@gmail.com</a>.</p>
+      <p>If you'd like to collaborate or see project demos, email me at <a href="mailto:4prudhvinarayana@gmail.com">prudhvinarayana@gmail.com</a>.</p>
       <p class="small">You can add links to your GitHub / LinkedIn in the header to replace placeholders.</p>
     </section>
   </main>
@@ -200,4 +177,5 @@ def analyze_heritage_image(self, image_path, user_query=None):
   </footer>
 </body>
 </html>
+
 
